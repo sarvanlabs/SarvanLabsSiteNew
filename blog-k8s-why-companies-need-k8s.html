@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Sarvan Labs</title>
+
+  <script>
+    // inject common head elements
+    (async () => {
+      try {
+        const res = await fetch('./common-head.html', { cache: 'no-cache' });
+        const html = await res.text();
+        document.head.insertAdjacentHTML('beforeend', html);
+      } catch (e) {
+        console.error('Failed to load common head:', e);
+      }
+    })();
+  </script>
+  <!-- <script defer src="./assets/js/common-head.js" data-include="/common-head.html"></script> -->
+</head>
+
+<body>
+  <div class="content-wrapper">
+    <div data-include="./header.html"></div>
+    <!-- /header -->
+    <section class="wrapper bg-soft-primary">
+      <div class="container pt-10 pb-19 pt-md-14 pb-md-20 text-center">
+        <div class="row">
+          <div class="col-md-10 col-xl-8 mx-auto">
+            <div class="post-header">
+              <div class="post-category text-line">
+                <a href="#" class="hover" rel="category">Kubernetes · DevOps &amp; Cloud</a>
+              </div>
+              <h1 class="display-1 mb-4">Kubernetes for Modern Businesses: Why Teams Are Moving to K8s</h1>
+              <ul class="post-meta mb-5">
+                <li class="post-date"><i class="uil uil-calendar-alt"></i><span>5 Nov 2025</span></li>
+                <li class="post-author"><a href="#"><i class="uil uil-user"></i><span>By Sarvan Labs</span></a></li>
+                <!-- <li class="post-comments"><a href="#"><i class="uil uil-comment"></i>3<span> Comments</span></a></li>
+                <li class="post-likes"><a href="#"><i class="uil uil-heart-alt"></i>18<span> Likes</span></a></li> -->
+              </ul>
+              
+            </div>
+            
+          </div>
+          <!-- /column -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /section -->
+    <section class="wrapper bg-light">
+      <div class="container pb-14 pb-md-16">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <div class="blog single mt-n17">
+              <div class="card">
+                <figure class="card-img-top"><img src="./assets/img/photos/b1.jpg"
+                    alt="Abstract technology background representing Kubernetes and cloud infrastructure" /></figure>
+                <div class="card-body">
+                  <div class="classic-view">
+                    <article class="post">
+                      <div class="post-content mb-5">
+                        <h2 class="h1 mb-4">Kubernetes for Modern Businesses: Why Teams Are Moving to K8s</h2>
+                        <p>
+                          Every company today is, in some way, a software company. Customer experiences, operations, analytics
+                          and internal tools all depend on applications running reliably. As systems grow, traditional VM-based
+                          deployments and manual server management start to slow teams down and introduce risk.
+                        </p>
+                        <p>
+                          <strong>Kubernetes (K8s)</strong> has become the industry standard for running containerized
+                          applications. It gives engineering teams a consistent platform to deploy, scale and operate services
+                          across environments — from local development to multi-region cloud clusters. At
+                          <strong>Sarvan Labs</strong>, we use Kubernetes as a core building block for modern DevOps and cloud
+                          infrastructure.
+                        </p>
+
+                        <h2 class="h2 mb-4 mt-6">What is Kubernetes?</h2>
+                        <p>
+                          Kubernetes is an <strong>open-source container orchestration platform</strong>. In simple terms, it
+                          takes your containers and your machines and continuously answers three questions for you:
+                        </p>
+                        <ul>
+                          <li><strong>Where</strong> should each container run?</li>
+                          <li><strong>How many</strong> instances of a service should be running?</li>
+                          <li><strong>What happens</strong> if something fails?</li>
+                        </ul>
+                        <p>
+                          Instead of manually managing servers and processes, you declare the desired state of your system in
+                          manifests: which image to run, how many replicas, what resources, how to expose it. Kubernetes
+                          constantly works to align the actual state of the cluster with that desired state. If a node fails,
+                          pods are rescheduled. If a container crashes, it’s restarted. If load increases, it can scale.
+                        </p>
+
+                        <div class="row g-6 mt-3 mb-10">
+                          <div class="col-md-6">
+                            <figure class="hover-scale rounded cursor-dark">
+                              <a href="./assets/img/photos/b8-full.jpg"
+                                 data-glightbox="title: Kubernetes Cluster; description: Visualizing nodes and pods in a Kubernetes cluster"
+                                 data-gallery="post">
+                                <img src="./assets/img/photos/b8.jpg"
+                                     alt="Abstract visualization of a Kubernetes cluster with nodes and pods" />
+                              </a>
+                            </figure>
+                          </div>
+                          <!--/column -->
+                          <div class="col-md-6">
+                            <figure class="hover-scale rounded cursor-dark">
+                              <a href="./assets/img/photos/b9-full.jpg"
+                                 data-glightbox="title: DevOps Collaboration; description: Engineers collaborating around Kubernetes and CI/CD pipelines"
+                                 data-gallery="post">
+                                <img src="./assets/img/photos/b9.jpg"
+                                     alt="Developers collaborating around DevOps and Kubernetes workflows" />
+                              </a>
+                            </figure>
+                          </div>
+                          <!--/column -->
+                          <div class="col-md-6">
+                            <figure class="hover-scale rounded cursor-dark">
+                              <a href="./assets/img/photos/b10-full.jpg"
+                                 data-glightbox="title: Observability; description: Monitoring dashboards for Kubernetes workloads"
+                                 data-gallery="post">
+                                <img src="./assets/img/photos/b10.jpg"
+                                     alt="Monitoring dashboard for Kubernetes workloads and services" />
+                              </a>
+                            </figure>
+                          </div>
+                          <!--/column -->
+                          <div class="col-md-6">
+                            <figure class="hover-scale rounded cursor-dark">
+                              <a href="./assets/img/photos/b11-full.jpg"
+                                 data-glightbox="title: Cloud Infrastructure; description: Cloud-native apps running on containers"
+                                 data-gallery="post">
+                                <img src="./assets/img/photos/b11.jpg"
+                                     alt="Cloud infrastructure with containers and microservices" />
+                              </a>
+                            </figure>
+                          </div>
+                          <!--/column -->
+                        </div>
+                        <!-- /.row -->
+
+                        <h2 class="h2 mb-4">Why companies are adopting Kubernetes</h2>
+                        <p>
+                          Kubernetes isn’t just a trendy technology — it directly impacts how fast you can ship features, how
+                          reliable your systems are, and how efficiently you use infrastructure. Here are key advantages we see
+                          across real client projects.
+                        </p>
+
+                        <h3 class="h3 mb-3 mt-4">1. Consistency across environments</h3>
+                        <p>
+                          Running the same application on a laptop, staging and production can be painful with traditional
+                          setups. Different OS versions and manual configuration often lead to “works on my machine” problems.
+                          With containers and Kubernetes, you package the app once and run the same container image everywhere.
+                          Kubernetes then provides a consistent way to deploy and manage those containers across clusters.
+                        </p>
+
+                        <h3 class="h3 mb-3 mt-4">2. Built-in scalability</h3>
+                        <p>
+                          Traffic is rarely flat. Sales, campaigns, product launches and seasonal peaks all create sudden load.
+                          Kubernetes enables <strong>horizontal scaling</strong> by adding or removing replicas of a service as
+                          needed. With Horizontal Pod Autoscalers, scaling can be automated based on CPU, memory or custom
+                          metrics, keeping performance steady while controlling costs.
+                        </p>
+
+                        <h3 class="h3 mb-3 mt-4">3. Self-healing and higher uptime</h3>
+                        <p>
+                          In a VM-only world, if a process dies or a machine goes down, someone has to notice and fix it.
+                          Kubernetes constantly watches the health of your workloads. If a container crashes, it restarts it.
+                          If a node becomes unhealthy, pods are rescheduled to healthy nodes. Liveness and readiness probes
+                          ensure only healthy instances receive traffic — resulting in <strong>more resilient applications</strong>
+                          and fewer late-night incidents.
+                        </p>
+
+                        <h3 class="h3 mb-3 mt-4">4. Faster, safer deployments</h3>
+                        <p>
+                          Kubernetes integrates naturally with CI/CD systems like Jenkins, GitHub Actions, Argo CD and Harness.
+                          Images are built, manifests are applied and deployments are automated. Strategies such as
+                          <strong>rolling updates</strong>, <strong>blue-green deployments</strong> and
+                          <strong>canary releases</strong> become part of your standard workflow instead of fragile custom
+                          scripts, lowering deployment risk and speeding up feedback for product teams.
+                        </p>
+
+                        <h3 class="h3 mb-3 mt-4">5. Better infrastructure utilization &amp; cost control</h3>
+                        <p>
+                          Without orchestration, teams often over-provision VMs “just in case”. In Kubernetes, each workload
+                          declares resource requests and limits, and the scheduler packs pods efficiently onto nodes. Combined
+                          with cluster autoscaling on cloud providers, this leads to <strong>leaner, more predictable
+                          infrastructure costs</strong> without sacrificing reliability.
+                        </p>
+
+                        <h3 class="h3 mb-3 mt-4">6. Cloud portability and reduced lock-in</h3>
+                        <p>
+                          Kubernetes runs on almost any infrastructure: on-prem, managed services such as EKS/GKE/AKS, bare
+                          metal, or edge clusters. If you decide to change providers or adopt a hybrid strategy, your workloads
+                          don’t need a full rewrite — the Kubernetes abstractions stay the same. For many organizations, this
+                          flexibility is a key part of long-term cloud strategy.
+                        </p>
+
+                        <h2 class="h2 mb-4 mt-6">Kubernetes vs. traditional deployment approaches</h2>
+                        <p>
+                          In a <strong>traditional VM-centric setup</strong>, each application or group of services runs on
+                          dedicated servers. Scaling means adding more VMs. Deployments are handled with scripts or
+                          configuration tools, and rollback can be slow and manual.
+                        </p>
+                        <p>
+                          In a <strong>Kubernetes-centric setup</strong>, you think in terms of services and workloads:
+                          containers, deployments, services and ingresses. The platform takes care of scheduling, scaling and
+                          recovery. Your teams focus more on the behavior of their applications and less on the underlying
+                          machines.
+                        </p>
+
+                        <blockquote class="fs-lg my-8">
+                          <p>
+                            “Kubernetes doesn’t magically fix bad architecture — but when combined with good engineering
+                            practices and DevOps culture, it becomes a powerful engine for speed, reliability and control.”
+                          </p>
+                          <footer class="blockquote-footer">Sarvan Labs Engineering Team</footer>
+                        </blockquote>
+
+                        <h2 class="h2 mb-4">Real-world Kubernetes use cases</h2>
+                        <p>Across industries, we see a few recurring patterns for Kubernetes adoption:</p>
+                        <p>
+                          <strong>E-commerce &amp; D2C brands:</strong> auto-scaling frontend, cart and checkout services during
+                          high-traffic campaigns, while keeping latency low.
+                        </p>
+                        <p>
+                          <strong>SaaS platforms:</strong> running multi-tenant applications where each customer, region or
+                          environment maps to namespaces or clusters, with GitOps and CI/CD enabling frequent, safe releases.
+                        </p>
+                        <p>
+                          <strong>FinTech &amp; banking:</strong> using Kubernetes to host regulated workloads with strict
+                          security controls: RBAC, network policies, secrets management and service meshes help enforce
+                          zero-trust principles.
+                        </p>
+                        <p>
+                          <strong>AI/ML workloads:</strong> orchestrating batch jobs, model training, feature pipelines and
+                          GPU-intensive workloads on shared clusters instead of managing ad-hoc servers for each experiment.
+                        </p>
+                        <p>
+                          <strong>Internal platforms:</strong> building an internal developer platform where teams onboard via
+                          templates and GitOps repos, and Kubernetes provides the standardized runtime behind the scenes.
+                        </p>
+
+                        <h2 class="h2 mb-4 mt-6">How Sarvan Labs helps you succeed with Kubernetes</h2>
+                        <p>
+                          Adopting Kubernetes is not just about spinning up a cluster. The real value appears when it is
+                          integrated with your CI/CD, observability, security and team workflows. This is where
+                          <strong>Sarvan Labs</strong> usually partners with clients.
+                        </p>
+                        <ul>
+                          <li><strong>Cluster design &amp; setup</strong> on AWS EKS, GCP GKE, Azure AKS or self-managed clusters.
+                          </li>
+                          <li><strong>CI/CD integration</strong> with tools like Jenkins, Harness, Argo CD or GitHub Actions.
+                          </li>
+                          <li><strong>Observability &amp; SRE foundations</strong> using Prometheus, Grafana and logging stacks.
+                          </li>
+                          <li><strong>Security hardening</strong> with RBAC, Pod Security, network policies, image scanning and
+                            secrets management.</li>
+                          <li><strong>Migration from legacy stacks</strong> (monoliths on VMs) to containerized,
+                            Kubernetes-ready architectures.</li>
+                          <li><strong>Engineering enablement &amp; training</strong> so your teams can confidently operate and
+                            evolve the platform.</li>
+                        </ul>
+                        <p>
+                          Our goal is simple: give you a Kubernetes platform that your engineers enjoy using, your leadership
+                          trusts, and your customers never have to think about.
+                        </p>
+
+                        <h2 class="h2 mb-4 mt-6">Conclusion</h2>
+                        <p>
+                          Kubernetes has moved from “experimental” to “expected” in many engineering organizations. It offers a
+                          consistent, automated and resilient way to run applications at scale — but it needs the right design
+                          and processes around it.
+                        </p>
+                        <p>
+                          For businesses, the real win is not just having a K8s cluster; it’s <strong>shipping features
+                          faster</strong>, <strong>reducing downtime</strong> and <strong>gaining clearer control over
+                          infrastructure</strong>. That’s where Kubernetes, combined with a strong DevOps culture, truly shines.
+                        </p>
+                        <p class="mb-0">
+                          At <strong>Sarvan Labs</strong>, we help companies use Kubernetes as a backbone for their DevOps and
+                          cloud strategy — from the first pilot cluster to a mature platform.
+                          <br />
+                          <strong>Want to explore if Kubernetes is right for your systems?</strong>
+                          Reach out at <a href="mailto:contact@sarvanlabs.com">contact@sarvanlabs.com</a>.
+                        </p>
+                      </div>
+                      <!-- /.post-content -->
+                      <div class="post-footer d-md-flex flex-md-row justify-content-md-between align-items-center mt-8">
+                        <div>
+                          <ul class="list-unstyled tag-list mb-0">
+                            <li><a href="#" class="btn btn-soft-ash btn-sm rounded-pill mb-0">Kubernetes</a></li>
+                            <li><a href="#" class="btn btn-soft-ash btn-sm rounded-pill mb-0">DevOps</a></li>
+                            <li><a href="#" class="btn btn-soft-ash btn-sm rounded-pill mb-0">Cloud Native</a></li>
+                          </ul>
+                        </div>
+                        <!-- <div class="mb-0 mb-md-2">
+                          <div class="dropdown share-dropdown btn-group">
+                            <button
+                              class="btn btn-sm btn-red rounded-pill btn-icon btn-icon-start dropdown-toggle mb-0 me-0"
+                              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <i class="uil uil-share-alt"></i> Share </button>
+                            <div class="dropdown-menu">
+                              <a class="dropdown-item" href="#"><i class="uil uil-twitter"></i>Twitter</a>
+                              <a class="dropdown-item" href="#"><i class="uil uil-facebook-f"></i>Facebook</a>
+                              <a class="dropdown-item" href="#"><i class="uil uil-linkedin"></i>LinkedIn</a>
+                            </div>
+                          </div>
+                        </div> -->
+                      </div>
+                      <!-- /.post-footer -->
+                    </article>
+                    <!-- /.post -->
+                  </div>
+                  <!-- /.classic-view -->
+                  <hr />
+                  <div class="author-info d-md-flex align-items-center mb-3">
+                    <div class="d-flex align-items-center">
+                      <!-- <figure class="user-avatar"><img class="rounded-circle" alt=""
+                          src="./assets/img/avatars/u3.jpg" /></figure> -->
+                      <div>
+                        <h6><a href="#" class="link-dark">Sarvan Labs Engineering Team</a></h6>
+                        <span class="post-meta fs-15">DevOps · Cloud · Security</span>
+                      </div>
+                    </div>
+                    <!-- <div class="mt-3 mt-md-0 ms-auto">
+                      <a href="./blog.html"
+                        class="btn btn-sm btn-soft-ash rounded-pill btn-icon btn-icon-start mb-0"><i
+                          class="uil uil-file-alt"></i> All Posts</a>
+                    </div> -->
+                  </div>
+                  <!-- /.author-info -->
+                  <p>
+                    We design, secure and automate infrastructure for engineering teams that want to move faster without
+                    losing control. From Kubernetes and CI/CD to observability and cloud architecture, Sarvan Labs helps
+                    you build platforms that scale with your business.
+                  </p>
+                  <!-- <nav class="nav social">
+                    <a href="#"><i class="uil uil-twitter"></i></a>
+                    <a href="#"><i class="uil uil-facebook-f"></i></a>
+                    <a href="#"><i class="uil uil-dribbble"></i></a>
+                    <a href="#"><i class="uil uil-instagram"></i></a>
+                    <a href="#"><i class="uil uil-youtube"></i></a>
+                  </nav> -->
+                  <!-- /.social -->
+                  <!-- <hr /> -->
+                  <!-- <h3 class="mb-6">You Might Also Like</h3> -->
+                  <!-- <div class="swiper-container blog grid-view mb-16" data-margin="30" data-dots="true" data-items-md="2"
+                    data-items-xs="1">
+                    <div class="swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <article>
+                            <figure class="overlay overlay-1 hover-scale rounded mb-5"><a href="#"> <img
+                                  src="./assets/img/photos/b4.jpg" alt="" /></a>
+                              <figcaption>
+                                <h5 class="from-top mb-0">Read More</h5>
+                              </figcaption>
+                            </figure>
+                            <div class="post-header">
+                              <div class="post-category text-line">
+                                <a href="#" class="hover" rel="category">Containers</a>
+                              </div>
+                              <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark"
+                                  href="./blog-post.html">From VMs to Containers: A Practical Migration Guide</a></h2>
+                            </div>
+                            <div class="post-footer">
+                              <ul class="post-meta mb-0">
+                                <li class="post-date"><i class="uil uil-calendar-alt"></i><span>14 Oct 2025</span></li>
+                                <li class="post-comments"><a href="#"><i class="uil uil-comment"></i>4</a></li>
+                              </ul>
+                            </div>
+                          </article>
+                        </div>
+                        <div class="swiper-slide">
+                          <article>
+                            <figure class="overlay overlay-1 hover-scale rounded mb-5"><a href="#"> <img
+                                  src="./assets/img/photos/b5.jpg" alt="" /></a>
+                              <figcaption>
+                                <h5 class="from-top mb-0">Read More</h5>
+                              </figcaption>
+                            </figure>
+                            <div class="post-header">
+                              <div class="post-category text-line">
+                                <a href="#" class="hover" rel="category">CI/CD</a>
+                              </div>
+                              <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark" href="./blog-post.html">Designing
+                                  a GitOps Pipeline for Kubernetes</a></h2>
+                            </div>
+                            <div class="post-footer">
+                              <ul class="post-meta mb-0">
+                                <li class="post-date"><i class="uil uil-calendar-alt"></i><span>29 Sep 2025</span></li>
+                                <li class="post-comments"><a href="#"><i class="uil uil-comment"></i>3</a></li>
+                              </ul>
+                            </div>
+                          </article>
+                        </div>
+                        <div class="swiper-slide">
+                          <article>
+                            <figure class="overlay overlay-1 hover-scale rounded mb-5"><a href="#"> <img
+                                  src="./assets/img/photos/b6.jpg" alt="" /></a>
+                              <figcaption>
+                                <h5 class="from-top mb-0">Read More</h5>
+                              </figcaption>
+                            </figure>
+                            <div class="post-header">
+                              <div class="post-category text-line">
+                                <a href="#" class="hover" rel="category">Security</a>
+                              </div>
+                              
+                              <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark" href="./blog-post.html">Securing
+                                  Kubernetes Clusters: RBAC, Policies &amp; Beyond</a></h2>
+                            </div>
+                            
+                            <div class="post-footer">
+                              <ul class="post-meta mb-0">
+                                <li class="post-date"><i class="uil uil-calendar-alt"></i><span>12 Sep 2025</span></li>
+                                <li class="post-comments"><a href="#"><i class="uil uil-comment"></i>6</a></li>
+                              </ul>
+                              
+                            </div>
+                          </article>
+                        </div>
+                        <div class="swiper-slide">
+                          <article>
+                            <figure class="overlay overlay-1 hover-scale rounded mb-5"><a href="#"> <img
+                                  src="./assets/img/photos/b7.jpg" alt="" /></a>
+                              <figcaption>
+                                <h5 class="from-top mb-0">Read More</h5>
+                              </figcaption>
+                            </figure>
+                            <div class="post-header">
+                              <div class="post-category text-line">
+                                <a href="#" class="hover" rel="category">Platform Engineering</a>
+                              </div>
+                              
+                              <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark" href="./blog-post.html">Building
+                                  an Internal Developer Platform on K8s</a></h2>
+                            </div>
+                            <div class="post-footer">
+                              <ul class="post-meta mb-0">
+                                <li class="post-date"><i class="uil uil-calendar-alt"></i><span>7 Aug 2025</span></li>
+                                <li class="post-comments"><a href="#"><i class="uil uil-comment"></i>2</a></li>
+                              </ul>
+                              
+                            </div>
+                          </article>
+                        </div>
+                      </div>
+                    </div>
+                  </div> -->
+                  <!-- <hr /> -->
+                  <!-- <div id="comments">
+                    <h3 class="mb-6">5 Comments</h3>
+                    <ol id="singlecomments" class="commentlist">
+                      <li class="comment">
+                        <div class="comment-header d-md-flex align-items-center">
+                          <div class="d-flex align-items-center">
+                            <figure class="user-avatar"><img class="rounded-circle" alt=""
+                                src="./assets/img/avatars/u5.jpg" /></figure>
+                            <div>
+                              <h6 class="comment-author"><a href="#" class="link-dark">Connor Gibson</a></h6>
+                              <ul class="post-meta">
+                                <li><i class="uil uil-calendar-alt"></i>14 Nov 2025</li>
+                              </ul>
+                              
+                            </div>
+                          </div>
+                          <div class="mt-3 mt-md-0 ms-auto">
+                            <a href="#"
+                              class="btn btn-soft-ash btn-sm rounded-pill btn-icon btn-icon-start mb-0"><i
+                                class="uil uil-comments"></i> Reply</a>
+                          </div>
+                          
+                        </div>
+                        
+                        <p>
+                          Really helpful overview. We’ve been thinking about moving our services to Kubernetes and this
+                          clarified how it compares to our current VM-based setup.
+                        </p>
+                      </li>
+                      <li class="comment">
+                        <div class="comment-header d-md-flex align-items-center">
+                          <div class="d-flex align-items-center">
+                            <figure class="user-avatar"><img class="rounded-circle" alt=""
+                                src="./assets/img/avatars/u2.jpg" /></figure>
+                            <div>
+                              <h6 class="comment-author"><a href="#" class="link-dark">Nikolas Brooten</a></h6>
+                              <ul class="post-meta">
+                                <li><i class="uil uil-calendar-alt"></i>21 Nov 2025</li>
+                              </ul>
+                              
+                            </div>
+                            
+                          </div>
+                          
+                          <div class="mt-3 mt-md-0 ms-auto">
+                            <a href="#"
+                              class="btn btn-soft-ash btn-sm rounded-pill btn-icon btn-icon-start mb-0"><i
+                                class="uil uil-comments"></i> Reply</a>
+                          </div>
+                          
+                        </div>
+                        
+                        <p>
+                          Loved the “when does Kubernetes make sense?” section. Too many articles assume everyone should adopt
+                          K8s immediately. This was realistic and balanced.
+                        </p>
+                        <ul class="children">
+                          <li class="comment">
+                            <div class="comment-header d-md-flex align-items-center">
+                              <div class="d-flex align-items-center">
+                                <figure class="user-avatar"><img class="rounded-circle" alt=""
+                                    src="./assets/img/avatars/u3.jpg" /></figure>
+                                <div>
+                                  <h6 class="comment-author"><a href="#" class="link-dark">Pearce Frye</a></h6>
+                                  <ul class="post-meta">
+                                    <li><i class="uil uil-calendar-alt"></i>22 Nov 2025</li>
+                                  </ul>
+                                  
+                                </div>
+                                
+                              </div>
+                              
+                              <div class="mt-3 mt-md-0 ms-auto">
+                                <a href="#"
+                                  class="btn btn-soft-ash btn-sm rounded-pill btn-icon btn-icon-start mb-0"><i
+                                    class="uil uil-comments"></i> Reply</a>
+                              </div>
+                              
+                            </div>
+                            
+                            <p>
+                              Agree. We’re in the “few services, early stage” phase right now, and this helped us plan when a
+                              move to K8s would actually add value.
+                            </p>
+                            <ul class="children">
+                              <li class="comment">
+                                <div class="comment-header d-md-flex align-items-center">
+                                  <div class="d-flex align-items-center">
+                                    <figure class="user-avatar"><img class="rounded-circle" alt=""
+                                        src="./assets/img/avatars/u2.jpg" /></figure>
+                                    <div>
+                                      <h6 class="comment-author"><a href="#" class="link-dark">Nikolas Brooten</a></h6>
+                                      <ul class="post-meta">
+                                        <li><i class="uil uil-calendar-alt"></i>24 Nov 2025</li>
+                                      </ul>
+                                      
+                                    </div>
+                                    
+                                  </div>
+                                  
+                                  <div class="mt-3 mt-md-0 ms-auto">
+                                    <a href="#"
+                                      class="btn btn-soft-ash btn-sm rounded-pill btn-icon btn-icon-start mb-0"><i
+                                        class="uil uil-comments"></i> Reply</a>
+                                  </div>
+                                  
+                                </div>
+                                
+                                <p>
+                                  Same here. Bookmarking this to share with our leadership team when we talk about platform
+                                  strategy next quarter.
+                                </p>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="comment">
+                        <div class="comment-header d-md-flex align-items-center">
+                          <div class="d-flex align-items-center">
+                            <figure class="user-avatar"><img class="rounded-circle" alt=""
+                                src="./assets/img/avatars/u4.jpg" /></figure>
+                            <div>
+                              <h6 class="comment-author"><a href="#" class="link-dark">Lou Bloxham</a></h6>
+                              <ul class="post-meta">
+                                <li><i class="uil uil-calendar-alt"></i>3 Dec 2025</li>
+                              </ul>
+                              
+                            </div>
+                            
+                          </div>
+                          
+                          <div class="mt-3 mt-md-0 ms-auto">
+                            <a href="#"
+                              class="btn btn-soft-ash btn-sm rounded-pill btn-icon btn-icon-start mb-0"><i
+                                class="uil uil-comments"></i> Reply</a>
+                          </div>
+                          
+                        </div>
+                        
+                        <p>
+                          Thanks for highlighting both the technical and business angles. This is the kind of content I can
+                          send to non-technical stakeholders as well.
+                        </p>
+                      </li>
+                    </ol>
+                  </div> -->
+                  <!-- <hr /> -->
+                  <!-- <h3 class="mb-3">Would you like to share your thoughts?</h3>
+                  <p class="mb-7">Your email address will not be published. Required fields are marked *</p> -->
+                  <!-- <form class="comment-form">
+                    <div class="form-floating mb-4">
+                      <input type="text" class="form-control" placeholder="Name*" id="c-name">
+                      <label for="c-name">Name *</label>
+                    </div>
+                    <div class="form-floating mb-4">
+                      <input type="email" class="form-control" placeholder="Email*" id="c-email">
+                      <label for="c-email">Email*</label>
+                    </div>
+                    <div class="form-floating mb-4">
+                      <input type="text" class="form-control" placeholder="Website" id="c-web">
+                      <label for="c-web">Website</label>
+                    </div>
+                    <div class="form-floating mb-4">
+                      <textarea name="textarea" class="form-control" placeholder="Comment"
+                        style="height: 150px"></textarea>
+                      <label>Comment *</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary rounded-pill mb-0">Submit</button>
+                  </form> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div data-include="./footer.html"></div>
+  <script src="./assets/js/include.js" defer></script>
+  <script src="./assets/js/header.js" defer></script>
+
+  <div class="progress-wrap">
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+    </svg>
+  </div>
+  <script src="./assets/js/plugins.js"></script>
+</body>
+</html>
