@@ -398,6 +398,22 @@
             </div>
           </div>
         </div> -->
+        <div class="row mb-15 mb-md-18">
+          <div class="col-12">
+            <h2 class="fs-16 text-uppercase text-gradient gradient-1 mb-3 text-center">From Our Blog</h2>
+            <h3 class="display-4 mb-8 text-center">Insights on AI, DevOps, Security and Engineering</h3>
+            <div id="blogsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500" data-bs-pause="false" data-bs-touch="false">
+              <div class="carousel-indicators" id="blogsCarouselIndicators"></div>
+              <div class="carousel-inner" id="blogsCarouselInner"></div>
+              <button class="carousel-control-prev" id="blogsCarouselPrev" type="button" data-bs-target="#blogsCarousel" data-bs-slide="prev" aria-label="Previous blog">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              </button>
+              <button class="carousel-control-next" id="blogsCarouselNext" type="button" data-bs-target="#blogsCarousel" data-bs-slide="next" aria-label="Next blog">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              </button>
+            </div>
+          </div>
+        </div>
         <div class="row gx-3 gy-10 mb-15 mb-md-18 align-items-center">
           <div class="col-lg-6">
               <img class="img-fluid" src="./assets/img/demos/ai_automation_contact_us_enhance.png" srcset="./assets/img/demos/ai_automation_contact_us_enhance.png 2x" data-cue="fadeIn" data-delay="300" alt="" />
@@ -453,6 +469,89 @@
     </svg>
   </div>
   <script src="./assets/js/plugins.js"></script>
+  <script>
+    const homepageBlogPosts = [
+      {
+        url: './blog-history-of-docker-and-container-ecosystem.html',
+        image: './assets/img/photos/b2.jpg',
+        imageAlt: 'History of Docker and container ecosystem blog cover image',
+        category: 'Docker · Containers · DevOps',
+        title: 'History of Docker and Everything Around It',
+        summary: 'Explore how Docker evolved, why containers became mainstream, and the ecosystem that powers modern cloud-native delivery.'
+      },
+      {
+        url: './blog-k8s-why-companies-need-k8s.html',
+        image: './assets/img/photos/b1.jpg',
+        imageAlt: 'Kubernetes for Modern Businesses blog cover image',
+        category: 'Kubernetes · DevOps & Cloud',
+        title: 'Kubernetes for Modern Businesses: Why Teams Are Moving to K8s',
+        summary: 'Learn how Kubernetes improves reliability, scalability and deployment speed for modern product teams.'
+      }
+    ];
+
+    (function renderHomepageBlogCarousel() {
+      const carouselElement = document.getElementById('blogsCarousel');
+      const indicators = document.getElementById('blogsCarouselIndicators');
+      const inner = document.getElementById('blogsCarouselInner');
+      const prevButton = document.getElementById('blogsCarouselPrev');
+      const nextButton = document.getElementById('blogsCarouselNext');
+
+      if (!carouselElement || !indicators || !inner || !prevButton || !nextButton) return;
+
+      if (!homepageBlogPosts.length) {
+        inner.innerHTML = '<div class="carousel-item active"><div class="card border-0 shadow-lg"><div class="card-body p-6 text-center"><p class="mb-0">New blog posts will appear here soon.</p></div></div></div>';
+        prevButton.classList.add('d-none');
+        nextButton.classList.add('d-none');
+        return;
+      }
+
+      indicators.innerHTML = homepageBlogPosts.map((post, index) =>
+        `<button type="button" data-bs-target="#blogsCarousel" data-bs-slide-to="${index}" class="${index === 0 ? 'active' : ''}" aria-label="Go to blog ${index + 1}" ${index === 0 ? 'aria-current="true"' : ''}></button>`
+      ).join('');
+
+      inner.innerHTML = homepageBlogPosts.map((post, index) =>
+        `<div class="carousel-item ${index === 0 ? 'active' : ''}">
+          <article class="card shadow-lg border-0">
+            <div class="row g-0 align-items-center">
+              <div class="col-lg-5">
+                <a href="${post.url}">
+                  <img class="img-fluid rounded-top rounded-lg-start rounded-lg-top-0" src="${post.image}" alt="${post.imageAlt}" />
+                </a>
+              </div>
+              <div class="col-lg-7">
+                <div class="card-body p-6 p-md-8">
+                  <div class="post-category text-line mb-3">
+                    <a href="${post.url}" class="hover" rel="category">${post.category}</a>
+                  </div>
+                  <h4 class="h2 mb-3">
+                    <a class="link-dark" href="${post.url}">${post.title}</a>
+                  </h4>
+                  <p class="mb-4">${post.summary}</p>
+                  <a href="${post.url}" class="btn btn-sm btn-primary rounded-pill">Read Blog</a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>`
+      ).join('');
+
+      if (homepageBlogPosts.length < 2) {
+        indicators.classList.add('d-none');
+        prevButton.classList.add('d-none');
+        nextButton.classList.add('d-none');
+      }
+
+      if (typeof bootstrap !== 'undefined' && bootstrap.Carousel) {
+        const carousel = bootstrap.Carousel.getOrCreateInstance(carouselElement, {
+          interval: 3500,
+          pause: false,
+          touch: false,
+          wrap: true
+        });
+        carousel.cycle();
+      }
+    })();
+  </script>
 
 </body>
 
