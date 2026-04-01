@@ -402,7 +402,7 @@
           <div class="col-12">
             <h2 class="fs-16 text-uppercase text-gradient gradient-1 mb-3 text-center">From Our Blog</h2>
             <h3 class="display-4 mb-8 text-center">Insights on AI, DevOps, Security and Engineering</h3>
-            <div id="blogsCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div id="blogsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500" data-bs-pause="false" data-bs-touch="false">
               <div class="carousel-indicators" id="blogsCarouselIndicators"></div>
               <div class="carousel-inner" id="blogsCarouselInner"></div>
               <button class="carousel-control-prev" id="blogsCarouselPrev" type="button" data-bs-target="#blogsCarousel" data-bs-slide="prev" aria-label="Previous blog">
@@ -491,12 +491,13 @@
     ];
 
     (function renderHomepageBlogCarousel() {
+      const carouselElement = document.getElementById('blogsCarousel');
       const indicators = document.getElementById('blogsCarouselIndicators');
       const inner = document.getElementById('blogsCarouselInner');
       const prevButton = document.getElementById('blogsCarouselPrev');
       const nextButton = document.getElementById('blogsCarouselNext');
 
-      if (!indicators || !inner || !prevButton || !nextButton) return;
+      if (!carouselElement || !indicators || !inner || !prevButton || !nextButton) return;
 
       if (!homepageBlogPosts.length) {
         inner.innerHTML = '<div class="carousel-item active"><div class="card border-0 shadow-lg"><div class="card-body p-6 text-center"><p class="mb-0">New blog posts will appear here soon.</p></div></div></div>';
@@ -539,6 +540,16 @@
         indicators.classList.add('d-none');
         prevButton.classList.add('d-none');
         nextButton.classList.add('d-none');
+      }
+
+      if (typeof bootstrap !== 'undefined' && bootstrap.Carousel) {
+        const carousel = bootstrap.Carousel.getOrCreateInstance(carouselElement, {
+          interval: 3500,
+          pause: false,
+          touch: false,
+          wrap: true
+        });
+        carousel.cycle();
       }
     })();
   </script>
