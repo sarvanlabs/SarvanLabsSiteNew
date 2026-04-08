@@ -4,7 +4,7 @@
   function setHomeAnchors() {
     const onHome =
       location.pathname === "/" ||
-      location.pathname.endsWith("/index.html");
+      location.pathname.endsWith("/");
 
     if (!onHome) return;
 
